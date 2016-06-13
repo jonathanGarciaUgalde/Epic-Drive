@@ -1,11 +1,12 @@
 //
-// Created by jonathan on 6/8/16.
+// Created by jonathan
 //
 
-#ifndef EPIC_DRIVE_BTREE_H
-#define EPIC_DRIVE_BTREE_H
+#ifndef HARFS_CLIENT_BTREE_H
+#define HARFS_CLIENT_BTREE_H
+#include "//home/jonathan/ClionProjects/Epic-Drive/cr/ac/itcr/Logica/Buffer.h"
 
-#include "../managers/FileManager.h"
+#include "/home/jonathan/ClionProjects/Epic-Drive/cr/ac/itcr/Logica/Manager/FileManager.h"
 #include <math.h>
 
 #define DEFAULT_ORDER 100
@@ -58,13 +59,14 @@ class BTree {
     void rotateLeft(Buffer*,long, int);
     void mix(long,long);
     void split(long);
-public:
-    BTree();
-    BTree(std::string,long,long);
-    BTree(long,long);
-    BTree(std::string,std::string);
-    void insertKey(void*,long);
-    long searchKey(void*);
-    void deleteKey(void*);
+    public:
+        BTree();
+        BTree(std::string,long,long);
+        BTree(long,long);
+        BTree(std::string,std::string);
+        void insertKey(void*,long);
+        long searchKey(void*);
+        void deleteKey(void*);
 };
-#endif //EPIC_DRIVE_BTREE_H
+
+#endif //HARFS_CLIENT_BTREE_H

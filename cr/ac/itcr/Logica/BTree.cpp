@@ -1,5 +1,5 @@
 //
-// Created by jonathan on 6/8/16.
+// Created by jonathan
 //
 
 #include "BTree.h"
@@ -118,11 +118,11 @@ long BTree::binarySearch(void* key, bool terminal, long node, long first, long l
     Buffer* toCompare;
     long pointer;
     if(first != last) Buffer* toCompare = FileManager::readFile(dataPath,
-                                                                node*nodeLenght+NODE_OFFSET+(keyLenght+NODE_ELEMENT_LENGHT)*(last-first)/2,
-                                                                2*NODE_ELEMENT_LENGHT+keyLenght);
+                                               node*nodeLenght+NODE_OFFSET+(keyLenght+NODE_ELEMENT_LENGHT)*(last-first)/2,
+                                               2*NODE_ELEMENT_LENGHT+keyLenght);
     else toCompare = FileManager::readFile(dataPath,
-                                           node*nodeLenght+NODE_OFFSET+(keyLenght+NODE_ELEMENT_LENGHT)*last,
-                                           2*NODE_ELEMENT_LENGHT+keyLenght);
+                                                node*nodeLenght+NODE_OFFSET+(keyLenght+NODE_ELEMENT_LENGHT)*last,
+                                                2*NODE_ELEMENT_LENGHT+keyLenght);
     int comparison = compare(key,toCompare->get(NODE_ELEMENT_LENGHT),keyLenght);
     if(comparison == EQUAL_CODE){
         pointer = *static_cast<long*>(toCompare->get(0));
