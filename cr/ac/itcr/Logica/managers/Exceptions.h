@@ -2,8 +2,8 @@
 // Created by jonathan
 //
 
-#ifndef HARFS_CLIENT_EXCEPTIONS_H
-#define HARFS_CLIENT_EXCEPTIONS_H
+#ifndef CLIENT_EXCEPTIONS_H
+#define CLIENT_EXCEPTIONS_H
 
 #define OFFSET_OUT_OF_BOUND "Error: offset out of bound"
 #define KEY_NOT_FOUND "Error: key not found"
@@ -13,4 +13,5 @@
 #define NOT_ENOUGH_SPACE "Error: your structure is full"
 #define NOT_ENOUGH_SPACE_CODE 253
 
-#endif //HARFS_CLIENT_EXCEPTIONS_H
+
+#endif //CLIENT_EXCEPTIONS_H

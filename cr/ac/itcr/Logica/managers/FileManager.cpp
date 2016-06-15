@@ -12,7 +12,8 @@
 void FileManager::createFile(std::string name, int dataSize) {
     if(name.length()) {
         std::fstream outFile(PathConstants::PROJECT_PATH + name, std::ios::out);
-        for (int i = 0; i < dataSize; i++) outFile.write(NULL_CHR, NULL_CHR_SIZE);
+        for (int i = 0; i < dataSize; i++)
+        {outFile.write(NULL_CHR, NULL_CHR_SIZE)};
         outFile.close();
     }else{
         printf(NULL_PARAMETER);

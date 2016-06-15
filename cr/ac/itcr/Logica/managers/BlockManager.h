@@ -2,12 +2,10 @@
 // Created by jonathan
 //
 
-#ifndef HARFS_DISK_REGISTERMANAGER_H
-#define HARFS_DISK_REGISTERMANAGER_H
 
 #include <fstream>
 #include "FileManager.h"
-#include "../Exceptions.h"
+#include "Exceptions.h"
 
 // HEADER:      |    PrimerVacio  4 Bytes   |        Usados 4 Bytes         |   Bloques totales 4 Bytes  | =  12 Bytes
 
@@ -44,4 +42,4 @@ class BlockManager {
         void changeStorageBlock(std::string);
 };
 
-#endif //HARFS_DISK_REGISTERMANAGER_H
+

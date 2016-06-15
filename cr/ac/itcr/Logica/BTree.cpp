@@ -2,7 +2,11 @@
 // Created by jonathan
 //
 
+
 #include "BTree.h"
+#include "managers/FileManager.h"
+#include "managers/Exceptions.h"
+#include "pathConstants.h"
 
 /**@brief contruye un arbol b en disco con los atributos por defecto
  */
